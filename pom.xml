@@ -20,7 +20,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>de.JFP.ICB.Main</mainClass>
+                            <mainClass>de.JFP.ICB.Server.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
