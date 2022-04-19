@@ -43,4 +43,7 @@ public class ICB {
         }
     }
 
+    public static Socket getSocket() {
+        return socket;
+    }
 }

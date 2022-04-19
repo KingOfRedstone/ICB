@@ -1,5 +1,8 @@
 package de.JFP.ICB.API;
 
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +19,13 @@ public class Channel {
         if (!listeners.contains(listener)) {
             listeners.add(listener);
         }
+    }
+
+    public void sendMessage(String message) throws IOException {
+        JSONObject toSend = new JSONObject();
+        toSend.put("name", getName());
+        toSend.put("data", message);
+        ChannelManager.rawSend(toSend.toString());
     }
 
     public void onMessage(String message) {
