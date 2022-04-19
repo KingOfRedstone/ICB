@@ -18,6 +18,7 @@ public class Channel {
     public void addListener(ChannelListener listener) {
         if (!listeners.contains(listener)) {
             listeners.add(listener);
+            listener.setChannel(getName());
         }
     }
 

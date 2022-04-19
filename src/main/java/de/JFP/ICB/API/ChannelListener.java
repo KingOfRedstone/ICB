@@ -4,4 +4,6 @@ public interface ChannelListener {
 
     void onMessage(String message);
 
+    void setChannel(String channelName);
+
 }
